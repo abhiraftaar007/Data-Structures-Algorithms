@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// https://www.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1
+
 vector<int> subarraySum(vector<int> &arr, int target)
 {
     // code here
