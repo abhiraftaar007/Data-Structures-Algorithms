@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Brute Force
@@ -63,8 +63,8 @@ int longestSubarray2(vector<int> &a, int k)
 
 int main()
 {
-    vector<int> arr = {10,5,2,7,1,-10};
+    vector<int> arr = {10, 5, 2, 7, 1, -10};
     int k = 15;
-    cout << longestSubarray2(arr,k);
+    cout << longestSubarray2(arr, k);
     return 0;
 }
