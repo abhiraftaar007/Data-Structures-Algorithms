@@ -11,6 +11,7 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+// Solution 1
 vector<double> averageOfLevels(TreeNode *root)
 {
     if (root == NULL)
@@ -62,6 +63,34 @@ vector<double> averageOfLevels(TreeNode *root)
     return avgList;
 }
 
+// Solution 2
+vector<double> averageOfLevels2(TreeNode *root)
+{
+    queue<TreeNode *> q;
+    vector<double> ans;
+    q.push(root);
+
+    while (!q.empty())
+    {
+        int n = q.size();
+        double sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            TreeNode *node = q.front();
+            if (node->left)
+                q.push(node->left);
+            if (node->right)
+                q.push(node->right);
+            sum += node->val;
+            q.pop();
+        }
+
+        ans.push_back(sum / n);
+    }
+
+    return ans;
+}
+
 int main()
 {
     TreeNode *root = new TreeNode(3);
@@ -70,7 +99,7 @@ int main()
     root->right->left = new TreeNode(15);
     root->right->right = new TreeNode(7);
 
-    vector<double> result = averageOfLevels(root);
+    vector<double> result = averageOfLevels2(root);
 
     for (double avg : result)
     {
