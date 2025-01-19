@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// https://www.geeksforgeeks.org/problems/reverse-a-linked-list/1
+
 struct Node
 {
     int data;
