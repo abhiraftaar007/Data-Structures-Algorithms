@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// https://leetcode.com/problems/equal-row-and-column-pairs/description/?envType=study-plan-v2&envId=leetcode-75
+
 // Brute Force - self-solution - O(N^3)
 int equalPairs(vector<vector<int>> &grid)
 {
