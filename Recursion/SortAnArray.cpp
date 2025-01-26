@@ -14,7 +14,7 @@ void insert(vector<int> &v, int temp)
 
     insert(v, temp);
     v.push_back(val);
-    return;
+    // return;
 }
 
 void sortt(vector<int> &v)
@@ -35,7 +35,7 @@ void sortt(vector<int> &v)
 
 int main()
 {
-    vector<int> arr = {2, 3, 7, 6, 4, 5, 9};
+    vector<int> arr = {5,4,3,2,1};
     sortt(arr);
 
     for (auto &i : arr)

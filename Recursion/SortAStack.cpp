@@ -13,7 +13,7 @@ void insert(stack<int> &s, int temp)
     s.pop();
     insert(s, temp);
     s.push(val);
-    return;
+    // return;
 }
 
 void sortStack(stack<int> &s)
