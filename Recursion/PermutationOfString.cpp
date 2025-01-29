@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// https://www.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1
+
 // Recursive function to generate
 // all permutations of string s
 void recurPermute(int index, string &s,

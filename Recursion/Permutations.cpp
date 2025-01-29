@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// https://leetcode.com/problems/permutations/description/
+
 int n;
 vector<vector<int>> result;
 unordered_set<int> st;
