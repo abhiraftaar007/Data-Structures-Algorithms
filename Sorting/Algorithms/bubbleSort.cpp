@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // https://www.geeksforgeeks.org/problems/bubble-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=bubble-sort
@@ -31,18 +31,43 @@ public:
             }
         }
     }
-};
 
+    // Recursive Bubble Sort
+    void bubble_sort(int arr[], int n)
+    {
+        // Base Case: range == 1.
+        if (n == 1)
+            return;
+
+        for (int j = 0; j <= n - 2; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        // Range reduced after recursion:
+        bubble_sort(arr, n - 1);
+    }
+};
 
 int main()
 {
-    int arr[5] = {4,1,3,9,7};
-    Solution obj;
-    obj.bubbleSort(arr,5);
+    int arr[5] = {4, 1, 3, 9, 7};
 
-    for(auto&i:arr){
+    Solution obj;
+
+    // obj.bubbleSort(arr,5);
+
+    obj.bubble_sort(arr, 5);
+
+    for (auto &i : arr)
+    {
         cout << i << " ";
     }
-    
+
     return 0;
 }
