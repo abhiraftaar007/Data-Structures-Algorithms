@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
+
 // Solution 1 - Brute Force
 bool isSorted(vector<int>& arr, int n)
 {
